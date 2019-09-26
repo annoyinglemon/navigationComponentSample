@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/routesFragment">
+
+    <fragment
+        android:id="@+id/routesFragment"
+        android:name="producehero.kurt.assignment.ui.main.routes.view.RoutesFragment"
+        android:label="@string/dest_label_routes"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_routesFragment_to_establishmentsFragment"
+            app:destination="@id/establishmentsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/establishmentsFragment"
+        android:name="producehero.kurt.assignment.ui.main.establishments.view.EstablishmentsFragment"
+        android:label="{cityName} Route Plan"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_establishmentsFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="producehero.kurt.assignment.ui.main.orders.view.OrdersFragment"
+        android:label="@string/dest_label_order"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_ordersFragment_to_adjustOrdersFragment"
+            app:destination="@id/adjustOrdersFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="establishmentName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adjustOrdersFragment"
+        android:name="producehero.kurt.assignment.ui.main.orders.view.AdjustOrdersFragment"
+        android:label="@string/dest_label_adjust_order"
+        tools:layout="@layout/fragment_order_adjust">
+        <argument
+            android:name="orderItem"
+            app:argType="producehero.kurt.assignment.model.entity.OrderItem" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ProduceHero Assignment</string>
+    <string name="login_username_hint">Username</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_signin_button">Sign In</string>
+    <string name="button_estab_map">Map</string>
+    <string name="text_estab_signed">Signed</string>
+    <string name="button_item_adjust">Adjust</string>
+    <string name="text_item_weight">%.2f Kg</string>
+    <string name="text_item_quantity">x%d</string>
+    <string name="order_adjust_title">%s (%.2f Kg)</string>
+    <string name="order_adjust_quantity">Quantity:</string>
+    <string name="order_adjust_delete">Delete</string>
+    <string name="dest_label_routes">Routes</string>
+    <string name="dest_label_order">Order</string>
+    <string name="dest_label_adjust_order">Change Item</string>
+    <string name="title_menu_adjust_save">Save</string>
+    <string name="title_menu_orders_sign">Sign</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="clear"><u>Clear</u></string>
+</resources>
